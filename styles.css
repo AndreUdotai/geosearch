@@ -1,0 +1,209 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font: normal 16px sans-serif;
+	color: #555;
+}
+
+a {
+	text-decoration: none;
+	opacity: 0.75;
+	color: #555;
+}
+
+header {
+	background-image: url("https://www.esa.int/var/esa/storage/images/esa_multimedia/videos/2020/04/it_can_be_done._-_an_earth_day_message/21972204-3-eng-GB/It_can_be_done._-_an_Earth_Day_message_pillars.jpg");
+	padding: 10px;
+	text-align: center;
+}
+
+header>h1{
+	font-family: "Quicksand", sans-serif;
+	color: #fff;
+	opacity: 0.75;
+}
+
+header>p {
+	font-family: "Quicksand", sans-serif;
+	color: #fff;
+	opacity: 0.75;
+}
+
+
+@media all and (max-device-width: 480px) {
+    header h1 {
+		font-size: 2em;
+	}
+	#search {
+		width: 80%;
+		position: absolute;
+		top: 70px;
+    	left: 20px;
+	}
+	#map {
+		height: 400px;
+	}
+	.landmarkImage {
+		flex-grow: 1;
+		height: 250px;
+	}
+}
+
+@media all and (max-width: 800px) and (min-width: 481px) {
+	header h1 {
+		font-size: 3em;
+	}
+	header p {
+		font-size: 1.5em;
+	}
+	#search {
+		width: 70%;
+		position: absolute;
+		top: 100px;
+    	left: 20px;
+	}
+	#map {
+		height: 420px;
+	}
+	.landmarkImage {
+		flex-grow: 1;
+		height: 270px;
+	}
+}
+
+@media all and (min-width: 801px) {
+	header h1 {
+		font-size: 4em;
+		padding-top: 20px;
+	}
+	header p {
+		font-size: 2em;
+	}
+	#search {
+		width: 400px;
+		position: absolute;
+		top: 150px;
+    	left: 20px;
+	}
+	#map {
+		height: 420px;
+	}
+	.landmarkImage {
+		flex-grow: 1;
+		height: 270px;
+	}
+}
+
+/*#search {
+    margin: 10px auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	border-radius: 10px;
+	padding: 5px;
+	box-shadow: 2px 4px 3px rgb(165, 165, 169);
+	background-color: white;
+}*/
+
+#searchText {
+	margin: 10px auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	border-radius: 10px;
+	padding: 5px;
+	box-shadow: 2px 4px 3px rgb(165, 165, 169);
+	background-color: white;
+}
+
+#searchTextInput {
+	width: 80%;
+	font-size: 15px;
+	padding: 10px;
+	border: none;
+}
+
+#searchTextInput:focus {
+    outline: none;
+}
+
+button {
+	width: 20%;
+	border: none;
+	background-color: white;
+	color: rgb(162, 162, 162);
+}
+
+#map {
+	background-image: url("https://static8.depositphotos.com/1301934/943/v/450/depositphotos_9435044-stock-illustration-generic-city-map.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+#info {
+	padding: 10px;
+}
+
+#weatherInformation {
+	width: 300px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin-top: 10px;
+}
+
+#temperature {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+#temperatureNumber {
+	font-size: 50px;
+	margin-left: 10px;
+}
+
+sup {
+	font-size: 15px;
+}
+
+.fa {
+	padding-top: 5px;
+}
+
+#landmarks {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	padding: 10px;
+}
+
+.landmarkImage {
+	flex-basis: 300px;
+	border: grey 3px solid;
+	margin: 3px;
+}
+
+#landmarks div:nth-child(1) {
+    background-color: #00BFB8;
+}
+
+#landmarks div:nth-child(2) {
+    background-color: #8E007E;
+}
+
+#landmarks div:nth-child(3) {
+    background-color: #EF8956;
+}
+
+#landmarks div:nth-child(4) {
+    background-color: #23D0EA;
+}
+
+
