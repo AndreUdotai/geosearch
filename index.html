@@ -2,10 +2,8 @@
 <html lang="eng">
     <head>
 
-        <script src="https://use.fontawesome.com/64b8cce70b.js"></script>
 
         <!-- GENERAL INFO -->
-        <title>Geo-Search App</title>
         <meta charset="utf-8">
         <meta name="description" content="Find out weather conditions about your favourite places on the map!">
 
@@ -14,14 +12,25 @@
         
         <!-- Sets the viewport to the same width as the screen to obtain readable render without zooming-->
         <meta name="viewport" content="width=device-width" />
+
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
         
         <!-- LINKS TO CSS FILE ("STYLESHEET") AND SITE ICON -->
-        <link href="styles.css" type="text/css" rel="stylesheet">
-        
+        <link rel="stylesheet" type="text/css" href="assets/css/styles.css" >
+        <script src="https://use.fontawesome.com/64b8cce70b.js"></script>
         <!-- <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css"> -->
         <!-- <link href="bootstrap.css" type="text/css" rel="stylesheet"> -->
         <!-- <link href="favicon.ico" type="image/x-icon" rel="shortcut icon" > -->
         
+       <!--  <script src="https://api.mqcdn.com/sdk/place-search-js/v1.0.0/place-search.js"></script>
+        <link type="text/css" rel="stylesheet" href="https://api.mqcdn.com/sdk/place-search-js/v1.0.0/place-search.css"/> -->
+
+        <script src="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.js"></script>
+        <link type="text/css" rel="stylesheet" href="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.css"/>
+
+        <!-- <script src="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest-maps.js"></script> -->
+        <!-- <link type="text/css" rel="stylesheet" href="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest-maps.css"/> -->
+
         <!-- FACEBOOK METADATA -->
         <!-- /*<meta property="og:image" content="https://dogsdogsdogs.com/images/dog.png">
         <meta property="og:description" content="Dogs are incredible creatures. There may still be some facts you don't know about them!">
@@ -32,6 +41,7 @@
         <meta name="twitter:title" content="10 Fun Facts About Dogs">
         <meta name="twitter:description" content="Dogs are incredible creatures. There may still be some facts you don't know about them!">
         <meta name="twitter:image" content="https://dogsdogsdogs.com/images/dog.png">*/ -->
+        <title>Geo-Search App</title>
     </head>
     <body>
         <header>
@@ -39,12 +49,12 @@
             <p><em>See the world and and see the climes!</em></p>
         </header>
 
-        <section id="map">
-        </section>
+
+        <section id="map"></section>
 
         <section id="search">
             <form id="searchText">
-                <input type="text" placeholder="City.." id='searchTextInput'/>
+                <input type="search" placeholder="Start Searching..." id='searchTextInput'/>
                 <button  type="submit">
                     <i class="fa fa-search fa-2x" aria-hidden="true"></i>
                 </button>
@@ -70,7 +80,10 @@
             </div>
         </section>
 
-        <p id="coordinates"></p>
+        <p id="longitudeCoordinates"></p>
+        <p id="latitudeCoordinates"></p>
+        <p id="message"></p>
+
         
         <section id="landmarks">
             <div class="landmarkImage">
@@ -87,6 +100,6 @@
             </div>
         </section>
       
-        <script src="main.js" type="text/javascript"></script>
+        <script src="js/main.js" type="text/javascript"></script>
     </body>
 </html>
