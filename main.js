@@ -40,8 +40,8 @@ apiRequest.onreadystatechange = () => {
 		let longitudeCoordinate = response.Response.View[0].Result[0].Location.DisplayPosition.Longitude;
 		let latitudeCoordinate 	= response.Response.View[0].Result[0].Location.DisplayPosition.Latitude;
 
-		longitudeCoordinates.textContent 	= longitudeCoordinate;
-		latitudeCoordinates.textContent 	= latitudeCoordinate;
+// 		longitudeCoordinates.textContent 	= longitudeCoordinate;
+// 		latitudeCoordinates.textContent 	= latitudeCoordinate;
 
 	L.mapquest.key = '8Dki0pvPAIdaPvLx8D7svwxs72IUthCN';
 
