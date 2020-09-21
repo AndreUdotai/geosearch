@@ -139,10 +139,19 @@ button {
 }
 
 #map {
-	background-image: url("https://static8.depositphotos.com/1301934/943/v/450/depositphotos_9435044-stock-illustration-generic-city-map.jpg");
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
+	/*background-image: url("https://static8.depositphotos.com/1301934/943/v/450/depositphotos_9435044-stock-illustration-generic-city-map.jpg");*/
+	/*background-repeat: no-repeat;*/
+	/*background-position: center;*/
+	/*background-size: cover;*/
+    /*width: 80%;*/
+    /*height: 400px;*/
+    /*background-color: grey;*/
+
+}
+
+img {
+	height: 400px;
+	width: 400px;
 }
 
 #info {
