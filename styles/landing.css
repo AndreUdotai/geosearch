@@ -1,8 +1,9 @@
 body {
-    background-image: url(../images/newYork.jpeg);
+    background-image: url(../images/map1.jpeg);
     width: 100%;
     height: 100%;
     background-position: center;
+    /* box-shadow: inset 0 0 0 500px rgba(57, 107, 172,.3); */
     /* position: absolute; */
     /* background-repeat: no-repeat; */
     /* background-size: cover; */
@@ -52,27 +53,28 @@ body {
     background-repeat: no-repeat;
     opacity: 0;
     z-index: 0;
-    animation: imageAnimation 50s linear infinite; 
+    animation: imageAnimation 25s linear infinite;
+    box-shadow: inset 0 0 0 500px rgba(57, 107, 172,.5);
   }
   
   .slideshow li:nth-child(1) { 
-    background-image: url(../images/newYork.jpeg);
+    background-image: url(../images/map2.jpeg);
   }
   .slideshow li:nth-child(2) { 
-    background-image: url(../images/cityWeatherImage.jpeg);
-    animation-delay: 10s; 
+    background-image: url(../images/landmark3.jpeg);
+    animation-delay: 5s; 
   }
   .slideshow li:nth-child(3) { 
-    background-image: url(./images/newYork.jpeg);
-    animation-delay: 20s; 
+    background-image: url(../images/landmark4.jpeg);
+    animation-delay: 10s; 
   }
   .slideshow li:nth-child(4) { 
-    background-image: url(../images/cityWeatherImage.jpeg);
-    animation-delay: 30s; 
+    background-image: url(../images/map4.jpg);
+    animation-delay: 15s; 
   }
   .slideshow li:nth-child(5) { 
-    background-image: url(../images/cityWeatherImage.jpeg);
-    animation-delay: 40s; 
+    background-image: url(../images/landmark3.jpeg);
+    animation-delay: 20s; 
   }
   
   @keyframes imageAnimation { 
