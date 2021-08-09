@@ -1,4 +1,4 @@
-* {
+/* * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
@@ -31,10 +31,10 @@ header>p {
 	font-family: "Quicksand", sans-serif;
 	color: #fff;
 	opacity: 0.75;
-}
+} */
 
 
-@media all and (max-device-width: 480px) {
+/* @media all and (max-device-width: 480px) {
     header h1 {
 		font-size: 2em;
 	}
@@ -51,9 +51,9 @@ header>p {
 		flex-grow: 1;
 		height: 250px;
 	}
-}
+} */
 
-@media all and (max-width: 800px) and (min-width: 481px) {
+/* @media all and (max-width: 800px) and (min-width: 481px) {
 	header h1 {
 		font-size: 3em;
 	}
@@ -73,9 +73,9 @@ header>p {
 		flex-grow: 1;
 		height: 270px;
 	}
-}
+} */
 
-@media all and (min-width: 801px) {
+/* @media all and (min-width: 801px) {
 	header h1 {
 		font-size: 4em;
 		padding-top: 20px;
@@ -96,7 +96,7 @@ header>p {
 		flex-grow: 1;
 		height: 270px;
 	}
-}
+} */
 
 /*#search {
     margin: 10px auto;
@@ -109,7 +109,7 @@ header>p {
 	background-color: white;
 }*/
 
-#searchText {
+/* #searchText {
 	margin: 10px auto;
 	display: flex;
 	flex-direction: row;
@@ -118,9 +118,9 @@ header>p {
 	padding: 5px;
 	box-shadow: 2px 4px 3px rgb(165, 165, 169);
 	background-color: white;
-}
+} */
 
-#searchTextInput {
+/* #searchTextInput {
 	width: 80%;
 	font-size: 15px;
 	padding: 10px;
@@ -136,9 +136,9 @@ button {
 	border: none;
 	background-color: white;
 	color: rgb(162, 162, 162);
-}
+} */
 
-#map {
+/* #map { */
 	/*background-image: url("https://static8.depositphotos.com/1301934/943/v/450/depositphotos_9435044-stock-illustration-generic-city-map.jpg");*/
 	/*background-repeat: no-repeat;*/
 	/*background-position: center;*/
@@ -147,9 +147,9 @@ button {
     /*height: 400px;*/
     /*background-color: grey;*/
 
-}
+/* } */
 
-img {
+/* img {
 	height: 400px;
 	width: 400px;
 }
@@ -214,11 +214,19 @@ sup {
 #landmarks div:nth-child(4) {
     background-color: #23D0EA;
 }
-   
+    */
 
 
 
 
+
+	/* .mapInfo {
+
+	} */
+
+	/* #map {
+		height: 500px;
+	}  */
 
 
 
