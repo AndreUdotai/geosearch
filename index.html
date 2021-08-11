@@ -2,7 +2,7 @@
 <html lang="eng">
     <head>
 
-        <script src="https://use.fontawesome.com/64b8cce70b.js"></script>
+        <!-- <script src="https://use.fontawesome.com/64b8cce70b.js"></script> -->
 
         <!-- GENERAL INFO -->
         <title>Geo-Search App</title>
@@ -17,7 +17,8 @@
         
         <!-- LINKS TO CSS FILE ("STYLESHEET") AND SITE ICON -->
         <link href="styles/styles.css" type="text/css" rel="stylesheet">
-        
+        <script src="https://use.fontawesome.com/64b8cce70b.js"></script>
+
         <script src="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.js"></script>
         <link type="text/css" rel="stylesheet" href="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.css"/>
 
@@ -27,9 +28,9 @@
             integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
             crossorigin="anonymous"/>
         
-        <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+        <!-- <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css"> -->
         <!-- <link href="bootstrap.css" type="text/css" rel="stylesheet"> -->
-        <link href="favicon.ico" type="image/x-icon" rel="shortcut icon" >
+        <!-- <link href="favicon.ico" type="image/x-icon" rel="shortcut icon" > -->
         
         <!-- FACEBOOK METADATA -->
         <!-- /*<meta property="og:image" content="https://dogsdogsdogs.com/images/dog.png">
@@ -62,9 +63,9 @@
                         <div id="navbarContent" class="collapse navbar-collapse">
                             <ul class="nav navbar-nav">
                                 <li class="nav-item active">
-                                    <form>
+                                    <form id="searchFormHomePage">
                                         <div class="input-group">
-                                            <input type="text" class="form-control" id="searchInput" placeholder="E.g. Paris" aria-describedby="button-addon2">
+                                            <input type="text" class="form-control" id="searchInputHomePage" placeholder="E.g. Paris" aria-describedby="button-addon2">
                                             <div class="input-group-append">
                                                 <button type="submit" class="btn btn-outline-secondary btn-dark" id="button-addon2">
                                                     <i class="fa fa-search fa-1x" aria-hidden="true"></i>
@@ -82,9 +83,50 @@
         </div>
         <div class="container">
             <div class="row">
-                <div class="col">
-                    <img src="images/newYorkCityMap.png" class="img-fluid w-100" alt="Street map">
-                    <!-- <div id="map"></div> -->
+                <div class="col" id="mapDisplay">
+                    <!-- <img src="images/newYorkCityMap.png" class="img-fluid w-100" alt="Street map"> -->
+                    <div id="map">
+                        <div class="bd-example">
+                            <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+                              <ol class="carousel-indicators">
+                                <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                                <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+                                <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+                              </ol>
+                              <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                  <img src="images/3dMap.png" class="d-block w-100" height="500px" alt="...">
+                                  <div class="carousel-caption d-none d-md-block">
+                                    <h5>View Map of Any City in the World.</h5>
+                                    <p>.</p>
+                                  </div>
+                                </div>
+                                <div class="carousel-item">
+                                  <img src="images/3dmap.png" class="d-block w-100" height="500px" alt="...">
+                                  <div class="carousel-caption d-none d-md-block">
+                                    <h5>Get Current Weather Conditions of Searched Cities.</h5>
+                                    <p>.</p>
+                                  </div>
+                                </div>
+                                <div class="carousel-item">
+                                  <img src="images/3dmap.png" class="d-block w-100" height="500px" alt="...">
+                                  <div class="carousel-caption d-none d-md-block">
+                                    <h5>View Landmarks in places of Interest.</h5>
+                                    <p>.</p>
+                                  </div>
+                                </div>
+                              </div>
+                              <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                              </a>
+                              <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                              </a>
+                            </div>
+                          </div>
+                    </div>
                 </div>
             </div>
             <!-- row for map info -->
@@ -92,19 +134,20 @@
                 <div class="col-12 col-md-6 text-center">
                     <div class="card border-white">
                         <div class="card-body">
-                            <span class="h4">Washington,</span>USA <br>
-                            Cloudy <br>
-                            Postal Code
+                            <span class="h4" id="cityLabel"></span> <br>
+                            <span id="latitude"></span><span id="longitude"></span> <br>
+                            <span id="postalCode"></span>
                         </div>
                     </div>
                 </div>
                 <div class="col-12 col-md-6 text-center">
                     <div class="card border-white">
                         <div class="card-body">
-                            <i class="fa fa-cloud fa-3x" aria-hidden="true"></i>
-                            <span class="h1">23<sup><span class="h6"><a href="#">°C</a> | <a href="#">°F</a></span></sup></span><br>
-                            <small>Humidity: 100%</small> <br>
-                            <small>Wind: 5 km/h</small>
+                            <!-- <i class="fa fa-cloud fa-3x" aria-hidden="true"></i> -->
+                            <span id="weatherCondition"></span> <br>
+                            <span class="h1" id="temperature"></span> <sup id="temperatureControls" style='display: none'><span class="h6"><a href="#" id="celsius">°C</a> | <a href="#" id="fahrenheit">°F</a></span></sup> <br>
+                            <small><span id="humidity"></span></small> <br>
+                            <small><span id="windSpeed"></span></small>
                         </div>
                     </div>
                 </div>
@@ -115,7 +158,7 @@
                     <div class="card my-2">
                         <img src="images/landmark1.jpeg"  height="200" class="card-img-top" alt="...">
                         <div class="card-body">
-                          <p class="card-text">Square house.</p>
+                          <p class="card-text" id="landmark1Name">Square house.</p>
                         </div>
                       </div>
                 </div>
@@ -123,7 +166,7 @@
                     <div class="card my-2">
                         <img src="images/landmark2.jpeg"  height="200" class="card-img-top" alt="...">
                         <div class="card-body">
-                          <p class="card-text">Burg Khalif.</p>
+                          <p class="card-text" id="landmark2Name">Burg Khalif.</p>
                         </div>
                       </div>
                 </div>
@@ -131,7 +174,7 @@
                     <div class="card my-2">
                         <img src="images/landmark3.jpeg"  height="200" class="card-img-top" alt="...">
                         <div class="card-body">
-                          <p class="card-text">Boat house.</p>
+                          <p class="card-text" id="landmark3Name">Boat house.</p>
                         </div>
                       </div>
                 </div>
@@ -139,7 +182,7 @@
                     <div class="card my-2">
                         <img src="images/landmark4.jpeg" height="200" class="card-img-top" alt="...">
                         <div class="card-body">
-                          <p class="card-text">Lion fountain.</p>
+                          <p class="card-text" id="landmark4Name">Lion fountain.</p>
                         </div>
                       </div>
                 </div>
