@@ -7,6 +7,7 @@
         <!-- GENERAL INFO -->
         <title>Geo-Search App</title>
         <meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="description" content="Find out weather conditions about your favourite places on the map!">
 
         <!-- Change the mobile browser's viewport width -->
@@ -87,46 +88,11 @@
                     <img src="images/3dMap.png" class="img-fluid w-100" height="500px" alt="Street map">
                     <div id="map">
 
-                        <!-- <div class="bd-example">
-                            <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
-                              <ol class="carousel-indicators">
-                                <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
-                                <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-                                <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
-                              </ol>
-                              <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                  <img src="images/3dMap.png" class="d-block w-100" height="500px" alt="...">
-                                  <div class="carousel-caption d-none d-md-block">
-                                    <h5>View Map of Any City in the World.</h5>
-                                    <p>.</p>
-                                  </div>
-                                </div>
-                                <div class="carousel-item">
-                                  <img src="images/3dmap.png" class="d-block w-100" height="500px" alt="...">
-                                  <div class="carousel-caption d-none d-md-block">
-                                    <h5>Get Current Weather Conditions of Searched Cities.</h5>
-                                    <p>.</p>
-                                  </div>
-                                </div>
-                                <div class="carousel-item">
-                                  <img src="images/3dmap.png" class="d-block w-100" height="500px" alt="...">
-                                  <div class="carousel-caption d-none d-md-block">
-                                    <h5>View Landmarks in places of Interest.</h5>
-                                    <p>.</p>
-                                  </div>
-                                </div>
-                              </div>
-                              <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Previous</span>
-                              </a>
-                              <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Next</span>
-                              </a>
-                            </div>
-                          </div> -->
+
+
+
+
+
                     </div>
                 </div>
             </div>
@@ -156,7 +122,7 @@
             <!-- row for the landmarks -->
             <div class="row">
                 <div class="col-12 col-md-6 col-lg-3">
-                    <div class="card my-2">
+                    <div class="card my-2" id="landmarkCard1" style='display: none'>
                         <img src="images/landmark1.jpeg"  height="200" class="card-img-top" alt="...">
                         <div class="card-body">
                           <p class="card-text" id="landmark1Name">Square house.</p>
@@ -164,7 +130,7 @@
                       </div>
                 </div>
                 <div class="col-12 col-md-6 col-lg-3">
-                    <div class="card my-2">
+                    <div class="card my-2" id="landmarkCard2" style='display: none'>
                         <img src="images/landmark2.jpeg"  height="200" class="card-img-top" alt="...">
                         <div class="card-body">
                           <p class="card-text" id="landmark2Name">Burg Khalif.</p>
@@ -172,7 +138,7 @@
                       </div>
                 </div>
                 <div class="col-12 col-md-6 col-lg-3">
-                    <div class="card my-2">
+                    <div class="card my-2" id="landmarkCard3" style='display: none'>
                         <img src="images/landmark3.jpeg"  height="200" class="card-img-top" alt="...">
                         <div class="card-body">
                           <p class="card-text" id="landmark3Name">Boat house.</p>
@@ -180,7 +146,7 @@
                       </div>
                 </div>
                 <div class="col-12 col-md-6 col-lg-3">
-                    <div class="card my-2">
+                    <div class="card my-2" id="landmarkCard4" style='display: none'>
                         <img src="images/landmark4.jpeg" height="200" class="card-img-top" alt="...">
                         <div class="card-body">
                           <p class="card-text" id="landmark4Name">Lion fountain.</p>
