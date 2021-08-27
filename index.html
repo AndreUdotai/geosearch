@@ -29,10 +29,6 @@
             integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
             crossorigin="anonymous"/>
         
-        <!-- <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css"> -->
-        <!-- <link href="bootstrap.css" type="text/css" rel="stylesheet"> -->
-        <!-- <link href="favicon.ico" type="image/x-icon" rel="shortcut icon" > -->
-        
         <!-- FACEBOOK METADATA -->
         <!-- /*<meta property="og:image" content="https://dogsdogsdogs.com/images/dog.png">
         <meta property="og:description" content="Dogs are incredible creatures. There may still be some facts you don't know about them!">
@@ -51,117 +47,125 @@
                 <div class="row">
                     <nav class="col navbar navbar-expand-lg navbar-dark">
                         <div class="col-8">
-                        <a class="navbar-brand" href="index.html">
-                            <img src="images/geoSearchLogo.png" width="50" height="50" alt="Site logo">
-                            Geo-Search
-                        </a>
+                            <a class="navbar-brand" href="index.html">
+                                <img src="images/geoSearchLogo.png" width="50" height="50" alt="Site logo">
+                                Geo-Search
+                            </a>
                         </div>
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
-                        
+                         -->
                         <div class="col-12 col-lg-4">
-                        <div id="navbarContent" class="collapse navbar-collapse">
-                            <ul class="nav navbar-nav">
-                                <li class="nav-item active">
-                                    <form id="searchFormHomePage">
-                                        <div class="input-group">
-                                            <input type="text" class="form-control" id="searchInputHomePage" placeholder="E.g. Paris" aria-describedby="button-addon2">
-                                            <div class="input-group-append">
-                                                <button type="submit" class="btn btn-outline-secondary btn-dark" id="button-addon2">
-                                                    <i class="fa fa-search fa-1x" aria-hidden="true"></i>
-                                                </button>
+                            <!-- <div id="navbarContent" class="collapse navbar-collapse"> -->
+                            <div id="navbarContent">
+                                <ul class="nav navbar-nav">
+                                    <li class="nav-item active">
+                                        <form id="searchFormHomePage">
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" id="searchInputHomePage" placeholder="E.g. Limpopo Street, Abuja" aria-describedby="button-addon2">
+                                                <div class="input-group-append">
+                                                    <button type="button" class="btn btn-outline-none btn-light" id="clearButton"></button>
+                                                    <button type="submit" class="btn btn-outline-secondary btn-dark" id="button-addon2">
+                                                        <i class="fa fa-search fa-1x" aria-hidden="true"></i>
+                                                    </button>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </form>
-                                </li>
-                            </ul>
-                        </div>
+                                        </form>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </nav>
                 </div>
-            </div>    
+            </div>   
         </div>
-        <div class="container">
+
+        
+
+        <div class="container" id="mapContainer">
+            <!-- map display -->
             <div class="row">
                 <div class="col" id="mapDisplay">
-                    <img src="images/3dMap.png" class="img-fluid w-100" height="500px" alt="Street map">
+                    <!-- <img src="images/3dMap.png" class="img-fluid w-100" height="500px" alt="Street map"> -->
                     <div id="map">
 
-
-
-
-
-
                     </div>
                 </div>
             </div>
+
             <!-- row for map info -->
             <div class="row mapInfo">
-                <div class="col-12 col-md-6 text-center">
-                    <div class="card border-white">
-                        <div class="card-body">
-                            <span class="h4" id="cityLabel"></span> <br>
-                            <span id="latitude"></span><span id="longitude"></span> <br>
-                            <span id="postalCode"></span>
+                <div class="col-12 col-md-6 text-center" id="cityInfo2">
+                    <!-- <div class="card border-white">
+                        <div class="card-body" id="cityInfo">
+                           
                         </div>
-                    </div>
+                    </div> -->
                 </div>
-                <div class="col-12 col-md-6 text-center">
-                    <div class="card border-white">
-                        <div class="card-body">
-                            <!-- <i class="fa fa-cloud fa-3x" aria-hidden="true"></i> -->
-                            <span id="weatherCondition"></span> <br>
-                            <span class="h1" id="temperature"></span> <sup id="temperatureControls" style='display: none'><span class="h6"><a href="#" id="celsius">°C</a> | <a href="#" id="fahrenheit">°F</a></span></sup> <br>
-                            <small><span id="humidity"></span></small> <br>
-                            <small><span id="windSpeed"></span></small>
+                <div class="col-12 col-md-6 text-center" id="weatherInfo2">
+                    <!-- <div class="card border-white">
+                        <div class="card-body" id="weatherInfo">
+                        
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
+
             <!-- row for the landmarks -->
-            <div class="row">
-                <div class="col-12 col-md-6 col-lg-3">
-                    <div class="card my-2" id="landmarkCard1" style='display: none'>
-                        <img src="images/landmark1.jpeg"  height="200" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <p class="card-text" id="landmark1Name">Square house.</p>
+            <div class="row" id="landmarks">
+                
+            </div>
+
+        </div>
+
+        <div id="landingPage">
+            <div id="landing">
+                <div class="container" >
+                    <div class="row">
+                        <div class="col-sm-12 font-weight-bold mb-3" id="landingCaption">
+                            Search the world and see the climes!
                         </div>
-                      </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-3">
-                    <div class="card my-2" id="landmarkCard2" style='display: none'>
-                        <img src="images/landmark2.jpeg"  height="200" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <p class="card-text" id="landmark2Name">Burg Khalif.</p>
+                    </div>
+                    <!-- <div class="row mx-auto col-12" style="background-color: red;">
+                        <img src="images/weatherPhoto.png">
+                    </div> -->
+                    <div class="container">
+                        <div class="row">
+                            <!-- <div class="col-sm-4">
+                                <img src="images/weatherPhoto.png" width="60" height="60">
+                            </div> -->
+                            <div class="font-weight-bolder col-12 mx-auto mt-3 snippet">
+                                Search locations around the world and see the weather conditions and more.
+                            </div>
                         </div>
-                      </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-3">
-                    <div class="card my-2" id="landmarkCard3" style='display: none'>
-                        <img src="images/landmark3.jpeg"  height="200" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <p class="card-text" id="landmark3Name">Boat house.</p>
+                        <div class="row">
+                            <!-- <div class="col-sm-4">
+                                <img src="images/map2.jpeg" title="Tips" width="60" height="60">
+                            </div> -->
+                            <div class="font-weight-bolder col-12 mx-auto mt-3 snippet">
+                                Search using street with city names or only city names. 
+                            </div>
                         </div>
-                      </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-3">
-                    <div class="card my-2" id="landmarkCard4" style='display: none'>
-                        <img src="images/landmark4.jpeg" height="200" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <p class="card-text" id="landmark4Name">Lion fountain.</p>
+                        <div class="row">
+                            <!-- <div class="col-sm-4">
+                                <img src="images/tips.jpeg" title="Tips" width="60" height="60">
+                            </div> -->
+                            <!-- <div class="font-weight-bolder col-12 mx-auto mt-3 snippet">
+                                Check below the map for search tips.
+                            </div> -->
                         </div>
-                      </div>
+                    </div>
                 </div>
             </div>
         </div>
 
         <!-- webpage footer -->
-        <div class="bg-light mt-4">
+        <div class="bg-dark">
             <div class="container">
                 <div class="row">
                     <div class="col">
-                        <ul class="list-inline text-center">
+                        <ul class="list-inline text-center pt-2">
                             <li class="list-inline-item"><a href="#">About Us</a></li>
                             <li class="list-inline-item">&middot;</li>
                             <li class="list-inline-item"><a href="#">Privacy</a></li>
